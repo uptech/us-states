@@ -1,0 +1,24 @@
+{
+  "name": "us-states",
+  "version": "0.1.0",
+  "description": "TypeScript library to create US State objects easily ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uptech/us-states.git"
+  },
+  "author": "Claude Ciocan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uptech/us-states/issues"
+  },
+  "homepage": "https://github.com/uptech/us-states#readme",
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "typescript": "^3.4.3"
+  }
+}
