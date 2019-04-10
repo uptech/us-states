@@ -2,10 +2,18 @@
   "name": "us-states",
   "version": "0.1.0",
   "description": "TypeScript library to create US State objects easily ",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest",
-    "build": "tsc"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -18,7 +26,16 @@
   },
   "homepage": "https://github.com/uptech/us-states#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.11",
     "jest": "^24.7.1",
+    "jest-plugin-context": "^2.9.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.3"
-  }
+  },
+  "files": [
+    "lib /**/*"
+  ]
 }

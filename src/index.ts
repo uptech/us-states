@@ -1,1 +1,6 @@
-export const UsState = (state: string) => `Hello ${state}`;
+export class UsState {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
